@@ -1,0 +1,27 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_01_Basic_Syntax_Conditional_Statements_and_Loops;
+
+import java.util.Scanner;
+
+public class Ex02_Division_second {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num = Integer.parseInt(scanner.nextLine());
+
+        int[] ar = {2, 3, 6, 7, 10};
+
+        int x = 0;
+        for (int i = 0; i < ar.length; i++) {
+            if ((num % ar[i] == 0) && (ar[i] > x))
+                x = ar[i];
+        }
+
+        if (x == 0) {
+            System.out.println("Not divisible");
+        } else {
+            System.out.printf("The number is divisible by %d", x);
+        }
+
+
+    }
+}
