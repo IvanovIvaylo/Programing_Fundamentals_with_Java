@@ -1,0 +1,22 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_01_Basic_Syntax_Conditional_Statements_and_Loops;
+
+import java.util.Scanner;
+
+public class Ex04_Print_and_Sum {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int startNum = Integer.parseInt(scanner.nextLine());
+        int endNum = Integer.parseInt(scanner.nextLine());
+
+        int sum = 0;
+        String numbers = "";
+        for (int i = startNum; i <= endNum; i++) {
+            sum += i;
+            numbers += i + " ";
+        }
+
+        System.out.printf("%s%n" + "Sum: %d", numbers, sum);
+
+    }
+}
