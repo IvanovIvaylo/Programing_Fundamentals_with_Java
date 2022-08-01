@@ -1,0 +1,23 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_01_Basic_Syntax_Conditional_Statements_and_Loops;
+
+import java.util.Scanner;
+
+public class Ex08_Triangle_of_Numbers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = Integer.parseInt(scanner.nextLine());
+
+        int printOut = 1;
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(printOut + " ");
+            }
+
+            printOut++;
+            System.out.println();
+        }
+
+
+    }
+}
