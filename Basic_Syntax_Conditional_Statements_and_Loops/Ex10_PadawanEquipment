@@ -1,0 +1,38 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_01_Basic_Syntax_Conditional_Statements_and_Loops;
+
+import java.util.Scanner;
+
+public class Ex10_PadawanEquipment {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        double budget = Double.parseDouble(scanner.nextLine());
+        int students = Integer.parseInt(scanner.nextLine());
+        double sabrePrice = Double.parseDouble(scanner.nextLine());
+        double robePrice = Double.parseDouble(scanner.nextLine());
+        double beltPrice = Double.parseDouble(scanner.nextLine());
+
+        double expensesSabres = Math.ceil(students * 1.1) * sabrePrice ;
+        double expensesBelts = students * beltPrice;
+        double expensesRobes = students * robePrice;
+
+
+        for (int i = 1; i <= students ; i++) {
+            if (i % 6 == 0) {
+                expensesBelts -= beltPrice;
+            }
+        }
+
+
+        double expenses = expensesSabres + expensesRobes + expensesBelts;
+
+
+        if (expenses <= budget) {
+            System.out.printf("The money is enough - it would cost %.2flv.%n", expenses);
+        } else {
+            System.out.printf("George Lucas will need %.2flv more.%n",expenses - budget);
+        }
+
+
+    }
+}
