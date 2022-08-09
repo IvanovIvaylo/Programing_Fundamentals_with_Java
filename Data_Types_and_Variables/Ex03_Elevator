@@ -1,0 +1,27 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_02_Data_Types_and_Variables;
+
+import java.util.Scanner;
+
+public class Ex03_Elevator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int people = Integer.parseInt(scanner.nextLine());
+        int capacity = Integer.parseInt(scanner.nextLine());
+
+        double courses = Math.ceil((double) people / capacity);
+
+        System.out.printf("%.0f",courses);
+
+//        int course = people / capacity;
+//
+//        if (people <= capacity){
+//            course = 1;
+//        } else if (people % capacity != 0) {
+//            course += 1;
+//        }
+//
+//        System.out.println(course);
+
+    }
+}
