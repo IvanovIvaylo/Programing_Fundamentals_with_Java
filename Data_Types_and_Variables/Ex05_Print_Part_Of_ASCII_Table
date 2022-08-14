@@ -1,0 +1,20 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_02_Data_Types_and_Variables;
+
+
+import java.util.Scanner;
+
+public class Ex05_Print_Part_Of_ASCII_Table {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int startIndex = Integer.parseInt(scanner.nextLine());
+        int endIndex = Integer.parseInt(scanner.nextLine());
+
+        for (int i = startIndex; i <= endIndex ; i++) {
+            System.out.print((char) i + " ");
+
+        }
+
+    }
+}
+
