@@ -1,0 +1,19 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_02_Data_Types_and_Variables;
+
+import java.util.Scanner;
+
+public class Ex04_Sum_of_Chars {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int input = Integer.parseInt(scanner.nextLine());
+
+        int sum = 0;
+        for (int i = 1; i <= input ; i++) {
+            char letter = scanner.nextLine().charAt(0);
+            sum += letter;
+        }
+
+        System.out.printf("The sum equals: %d", sum);
+    }
+}
