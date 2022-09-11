@@ -1,0 +1,27 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_03_Arrays;
+
+import java.util.Scanner;
+
+public class E02_Common_Elements {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String first = scanner.nextLine();
+        String second = scanner.nextLine();
+
+        String[] firstArr = first.split(" ");
+        String[] secondArr = second.split(" ");
+
+        for (String secondElement : secondArr) {
+            for (String firstElement : firstArr) {
+
+                if (firstElement.equals(secondElement)) {
+                    System.out.print(firstElement + " ");
+                   break;
+                }
+            }
+        }
+
+
+    }
+}
