@@ -1,0 +1,35 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_04_Methods;
+
+import java.util.Scanner;
+
+public class E03_Characters_in_Range {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        char firstChar = scanner.nextLine().charAt(0);
+        char secondChar = scanner.nextLine().charAt(0);
+
+        printSequenceOfChars(firstChar, secondChar);
+
+    }
+
+    private static void printSequenceOfChars(char firstChar, char secondChar) {
+
+        if (firstChar < secondChar) {
+
+            for (char symbol = (char) (firstChar + 1); symbol < secondChar; symbol++) {
+                System.out.print(symbol + " ");
+            }
+
+        } else {
+
+            for (char symbol = (char) (secondChar + 1); symbol < firstChar; symbol++){
+                System.out.print(symbol + " ");
+            }
+
+        }
+
+    }
+
+
+}
