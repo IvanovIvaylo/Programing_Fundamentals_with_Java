@@ -1,0 +1,25 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_04_Methods;
+
+import java.util.Scanner;
+
+public class E07_NxN_Matrix {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num = Integer.parseInt(scanner.nextLine());
+
+        for (int i = 1; i <= num ; i++) {
+            printNxN(num);
+        }
+
+    }
+
+    private static void printNxN(int num) {
+
+        for (int i = 1; i <= num; i++) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println();
+    }
+}
