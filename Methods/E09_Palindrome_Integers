@@ -1,0 +1,36 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_04_Methods;
+
+import java.util.Scanner;
+
+public class E09_Palindrome_Integers {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        String num = scanner.nextLine();
+
+
+        while (!num.equals("END")) {
+
+            if (!isPalindrome(num)) {
+                System.out.println("false");
+            } else {
+                System.out.println("true");
+            }
+
+            num = scanner.nextLine();
+        }
+
+
+    }
+
+    private static boolean isPalindrome(String num) {
+
+        StringBuilder reversedString = new StringBuilder();
+
+        for (int i = num.length() - 1; i >= 0; i--) {
+            reversedString.append(num.charAt(i));
+        }
+
+        return num.equals(reversedString.toString());
+    }
+}
