@@ -1,0 +1,34 @@
+package ProgramingFundamentals_JAVA_2022.Exercise.Ex_04_Methods;
+
+import java.util.Scanner;
+
+public class E08_Factorial_Division {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int num1 = Integer.parseInt(scanner.nextLine());
+        int num2 = Integer.parseInt(scanner.nextLine());
+
+
+        long factorial1 = calculateFactorial(num1);
+        long factorial2 = calculateFactorial(num2);
+
+        double result = factorial1 * 1.0 / factorial2;
+        System.out.printf("%.2f", result);
+
+
+    }
+
+    private static long calculateFactorial (int number) {
+
+        long factorial = 1;
+        for (int i = 1; i <= number ; i++) {
+            factorial *= i;
+        }
+
+        return  factorial;
+    }
+
+
+
+}
